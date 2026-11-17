@@ -10,7 +10,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{SITE_URL}}/">
   <meta property="og:title" content="{{NAME}}: Open-source projects">
-  <meta property="og:description" content="Streaming data pipelines (Java & PySpark), a Spark optimizer Claude skill, and agentic AI engineering: actively built, tested and documented.">
+  <meta property="og:description" content="Senior Engineering Manager, Data Platform (15+ years). Open-source streaming pipelines (Java & PySpark), a Spark optimizer Claude skill, and agentic AI engineering.">
   <meta property="og:image" content="{{SITE_URL}}/assets/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
@@ -83,6 +83,20 @@
     .card footer a { font-weight: 600; }
     .empty { color: var(--muted); }
 
+    .location { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-top: 30px; }
+    .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; box-shadow: var(--shadow); }
+    .stat strong { display: block; font-size: 26px; line-height: 1.2; letter-spacing: -.02em; color: var(--accent); }
+    .stat span { display: block; margin-top: 4px; font-size: 13.5px; color: var(--muted); line-height: 1.4; }
+    .experience { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line);
+                  border-radius: 14px; box-shadow: var(--shadow); }
+    .experience li { padding: 16px 20px; border-top: 1px solid var(--line); }
+    .experience li:first-child { border-top: 0; }
+    .company { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; flex-wrap: wrap; }
+    .company span { font-weight: 500; font-size: 14px; color: var(--muted); }
+    .role { font-size: 14px; color: var(--accent); font-weight: 600; margin-top: 1px; }
+    .experience p { margin: 6px 0 0; font-size: 14.5px; color: var(--muted); }
+    .earlier { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
     .page-footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
     @media (max-width: 520px) {
       .page { padding-top: 36px; }
@@ -98,6 +112,7 @@
       <div>
         <h1>{{NAME}}</h1>
         <p class="headline">{{HEADLINE}}</p>
+        <p class="location">{{LOCATION}}</p>
       </div>
     </section>
     <p class="summary-text">{{SUMMARY}}</p>
@@ -112,6 +127,8 @@
       </a>
     </nav>
 
+    <section class="stats" aria-label="Impact at a glance">{{STATS}}</section>
+
     <h2>What I work on</h2>
     <div class="focus-grid">{{FOCUS_CARDS}}</div>
 
@@ -119,6 +136,11 @@
     <p class="section-note">{{PROJECT_COUNT}} public repositories I've committed to in the last {{WINDOW_DAYS}} days. This list updates itself daily.</p>
     <section class="projects">{{PROJECT_CARDS}}
     </section>
+
+    <h2>Where I've built data platforms</h2>
+    <p class="section-note">Travel and regulated financial services.</p>
+    <ul class="experience">{{EXPERIENCE}}</ul>
+    <p class="earlier">{{EXPERIENCE_EARLIER}}</p>
 
     <footer class="page-footer">
       Built from the GitHub API · updated {{BUILT_ON}} · <a href="{{GITHUB}}">github.com/satyaprakashdwivedi</a>

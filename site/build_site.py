@@ -99,6 +99,12 @@ def render_page(curated, projects):
     escape = html.escape
     focus_cards = "".join(f'<div class="focus"><h3>{escape(area["title"])}</h3><p>{escape(area["text"])}</p></div>'
                           for area in profile["focus"])
+    stat_tiles = "".join(f'<div class="stat"><strong>{escape(stat["value"])}</strong><span>{escape(stat["label"])}</span></div>'
+                         for stat in profile.get("stats", []))
+    experience_rows = "".join(
+        f'<li><div class="company">{escape(job["company"])}<span>{escape(job["years"])}</span></div>'
+        f'<div class="role">{escape(job["role"])}</div><p>{escape(job["text"])}</p></li>'
+        for job in profile.get("experience", []))
     project_cards = "".join(render_project_card(project) for project in projects) or \
         '<p class="empty">No public commits in the last 30 days.</p>'
     built_on = datetime.now(timezone.utc)
@@ -110,6 +116,10 @@ def render_page(curated, projects):
             .replace("{{GITHUB}}", escape(profile["github"]))
             .replace("{{LINKEDIN}}", escape(profile["linkedin"]))
             .replace("{{SITE_URL}}", SITE_URL)
+            .replace("{{LOCATION}}", escape(profile.get("location", "")))
+            .replace("{{STATS}}", stat_tiles)
+            .replace("{{EXPERIENCE}}", experience_rows)
+            .replace("{{EXPERIENCE_EARLIER}}", escape(profile.get("experience_earlier", "")))
             .replace("{{FOCUS_CARDS}}", focus_cards)
             .replace("{{PROJECT_CARDS}}", project_cards)
             .replace("{{PROJECT_COUNT}}", str(len(projects)))

@@ -1,17 +1,85 @@
 {
   "profile": {
     "name": "Satyaprakash Dwivedi",
-    "headline": "Engineering leader · Data platforms · AI engineering",
-    "summary": "Engineering leader with 14+ years building data platforms, now rebuilding hands-on as an AI/ML architect. These are the open-source projects I'm actively working on: streaming data pipelines, Spark performance tooling, and agentic AI built with a team of AI coding agents.",
+    "headline": "Senior Engineering Manager – Data Platform · 15+ years",
+    "summary": "Engineering leader with 15+ years building and operating data platforms at scale (streaming, data lakes, ETL, governance and lineage) across travel and regulated financial services. I lead with hands-on depth: these are the open-source projects I'm actively building, from streaming pipelines and Spark tuning to agentic AI.",
     "github": "https://github.com/satyaprakashdwivedi",
     "linkedin": "https://www.linkedin.com/in/satyaprakashdwivedi/",
     "focus": [
-      { "title": "Streaming data platforms", "text": "Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped." },
-      { "title": "Data quality & reliability", "text": "Great Expectations, quarantine streams, checkpoints, and performance tuning from real Spark logs." },
-      { "title": "AI-assisted engineering", "text": "Claude skills and multi-agent workflows that turn expertise into tools anyone on a team can use." }
-    ]
+      {
+        "title": "Streaming data platforms",
+        "text": "Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, as I've run at Expedia and for a Fortune 100 card issuer."
+      },
+      {
+        "title": "Data quality & reliability",
+        "text": "Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero."
+      },
+      {
+        "title": "AI-assisted engineering",
+        "text": "Claude skills and multi-agent workflows that turn expertise into tools a whole team can use, always with human review."
+      }
+    ],
+    "location": "Gurugram, India · open to remote",
+    "stats": [
+      {
+        "value": "15+",
+        "label": "years building data platforms"
+      },
+      {
+        "value": "4 → 35",
+        "label": "engineers: team grown across 3 countries"
+      },
+      {
+        "value": "15M/day",
+        "label": "events under a 1-hour SLA"
+      },
+      {
+        "value": "4h → 30m",
+        "label": "incident MTTR with AI-assisted triage"
+      },
+      {
+        "value": "−30%",
+        "label": "Spark compute cost via a log-reading optimiser"
+      }
+    ],
+    "experience": [
+      {
+        "company": "Expedia Group",
+        "role": "Senior Manager, Data Engineering",
+        "years": "2023 – now",
+        "text": "Data platform behind OneKey, Expedia's loyalty programme: 250+ Airflow pipelines, batch and streaming; AI agents for vulnerability fixes and Spark tuning."
+      },
+      {
+        "company": "CRISIL",
+        "role": "Associate Director, Platform Architecture",
+        "years": "2021 – 2023",
+        "text": "Company-wide data platform from the ground up, with cataloguing and lineage across every business domain."
+      },
+      {
+        "company": "S&P Global",
+        "role": "Senior Manager, Ingestion Platform",
+        "years": "2019 – 2021",
+        "text": "Cloud-native DataOps ingestion on NiFi and Databricks: data onboarding cut from 7 days to 4 hours."
+      },
+      {
+        "company": "Fortune 100 card issuer (via Impetus)",
+        "role": "Lead Big Data Engineer",
+        "years": "2018 – 2019",
+        "text": "Real-time data platform feeding ML models at 50–500 ms SLAs on Spark Structured Streaming."
+      },
+      {
+        "company": "Citi",
+        "role": "Manager, Big Data",
+        "years": "2014 – 2018",
+        "text": "Pipelines behind daily regulatory reports for global regulators, under a zero-miss mandate."
+      }
+    ],
+    "experience_earlier": "Earlier: software engineering at HSBC (payments) and Cognizant (Java, application security)."
   },
-  "author_names": ["Satyaprakash Dwivedi", "Satya Prakash Dwivedi"],
+  "author_names": [
+    "Satyaprakash Dwivedi",
+    "Satya Prakash Dwivedi"
+  ],
   "projects": {
     "spark-streaming-pipeline-py": {
       "title": "Spark Streaming Pipelines: PySpark",
@@ -23,7 +91,13 @@
         "dbt models as streaming business rules; pandas UDFs and plain Python functions as steps",
         "Runs via spark-submit, Databricks or Kubernetes · 45 tests in CI"
       ],
-      "tags": ["PySpark", "Kafka", "Great Expectations", "dbt", "pandas UDF"]
+      "tags": [
+        "PySpark",
+        "Kafka",
+        "Great Expectations",
+        "dbt",
+        "pandas UDF"
+      ]
     },
     "spark-streaming-pipeline": {
       "title": "Spark Streaming Pipelines: Java",
@@ -35,19 +109,30 @@
         "A Claude skill that builds a pipeline from just source, rules and sink",
         "Spark 3.5 · Java 11/17 · 31 tests + CI"
       ],
-      "tags": ["Java", "Spark 3.5", "Kafka", "dbt", "Claude skill"]
+      "tags": [
+        "Java",
+        "Spark 3.5",
+        "Kafka",
+        "dbt",
+        "Claude skill"
+      ]
     },
     "spark-optimizer-skill": {
       "title": "Spark Optimizer: Claude Skill",
       "order": 3,
-      "summary": "Point it at Spark event logs and executor logs; it measures what went wrong and recommends a conflict-free Spark config.",
+      "summary": "Open-source version of the Spark optimiser I built at work, where it cut Spark compute cost 30%. Point it at Spark event and executor logs; it measures what went wrong and recommends a conflict-free config.",
       "highlights": [
         "Detects skew, spill, GC pressure, wrongly sized shuffle partitions, idle executors",
         "Tells heap OOM apart from container kills (exit 137) and shifts memory from heap to overhead",
         "Sizes executors to your nodes so heap + overhead + Python memory always fit",
         "Standard-library only · 17 tests in CI"
       ],
-      "tags": ["Apache Spark", "Performance tuning", "Claude skill", "Python"]
+      "tags": [
+        "Apache Spark",
+        "Performance tuning",
+        "Claude skill",
+        "Python"
+      ]
     },
     "ai-engineering-portfolio": {
       "title": "AI Engineering Portfolio",
@@ -58,7 +143,13 @@
         "Built as tech lead directing a team of AI coding agents (Claude Code subagents + AI PR review)",
         "Hybrid model routing: Claude API plus local models via Ollama"
       ],
-      "tags": ["ML", "RAG", "LangGraph", "MCP", "LLMOps"]
+      "tags": [
+        "ML",
+        "RAG",
+        "LangGraph",
+        "MCP",
+        "LLMOps"
+      ]
     },
     "capstone-data-platform-copilot": {
       "title": "Data Platform Copilot",
@@ -69,7 +160,12 @@
         "Supervisor, NL→SQL, data-quality, runbook-RAG and incident-triage agents",
         "Designed to be cost-aware, evaluated and observable"
       ],
-      "tags": ["LangGraph", "Multi-agent", "RAG", "Data quality"]
+      "tags": [
+        "LangGraph",
+        "Multi-agent",
+        "RAG",
+        "Data quality"
+      ]
     }
   }
 }
