@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Satyaprakash Dwivedi · Projects</title>
+  <meta name="description" content="Engineering leader · Data platforms · AI engineering. Open-source projects I'm actively building: streaming data pipelines, Spark performance tooling and agentic AI.">
+  <link rel="canonical" href="https://satyaprakashdwivedi.github.io/">
+  <!-- LinkedIn / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://satyaprakashdwivedi.github.io/">
+  <meta property="og:title" content="Satyaprakash Dwivedi: Open-source projects">
+  <meta property="og:description" content="Streaming data pipelines (Java & PySpark), a Spark optimizer Claude skill, and agentic AI engineering: actively built, tested and documented.">
+  <meta property="og:image" content="https://satyaprakashdwivedi.github.io/assets/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230f766e'/><text x='32' y='42' font-size='28' text-anchor='middle' fill='white' font-family='Helvetica,Arial' font-weight='700'>SD</text></svg>">
+  <style>
+    :root {
+      --bg: #f7f8fa; --surface: #ffffff; --text: #16202a; --muted: #5b6875; --line: #e3e7ec;
+      --accent: #0f766e; --accent-soft: #e6f4f2; --status: #8a5a00; --status-soft: #fff4dc;
+      --shadow: 0 1px 2px rgba(16,24,40,.05), 0 4px 16px rgba(16,24,40,.04);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117; --surface: #151b23; --text: #e6edf3; --muted: #98a4b3; --line: #262f3a;
+        --accent: #3ec7b8; --accent-soft: #10302d; --status: #f2c063; --status-soft: #3a2c0d;
+        --shadow: none;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: 1040px; margin: 0 auto; padding: 56px 20px 40px; }
+
+    .intro { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+    .avatar { width: 88px; height: 88px; border-radius: 50%; border: 3px solid var(--surface); box-shadow: var(--shadow); }
+    .intro h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; letter-spacing: -.02em; }
+    .headline { margin: 6px 0 0; color: var(--accent); font-weight: 600; }
+    .summary-text { max-width: 760px; margin: 22px 0 0; color: var(--muted); font-size: 17px; }
+    .links { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+    .button {
+      display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px;
+      border: 1px solid var(--line); background: var(--surface); color: var(--text); font-weight: 600; font-size: 15px;
+    }
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .button:hover { text-decoration: none; filter: brightness(1.05); }
+    .button svg { width: 18px; height: 18px; fill: currentColor; }
+
+    h2 { margin: 52px 0 6px; font-size: 22px; letter-spacing: -.01em; }
+    .section-note { margin: 0 0 20px; color: var(--muted); font-size: 15px; }
+
+    .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; margin-top: 18px; }
+    .focus { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--shadow); }
+    .focus h3 { margin: 0 0 6px; font-size: 16px; }
+    .focus p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+    .card {
+      display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line);
+      border-radius: 14px; padding: 22px; box-shadow: var(--shadow);
+    }
+    .card header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+    .card h3 { margin: 0; font-size: 18px; line-height: 1.3; }
+    .card h3 a { color: var(--text); }
+    .status { flex: none; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px;
+              color: var(--status); background: var(--status-soft); white-space: nowrap; }
+    .card .summary { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+    .highlights { margin: 14px 0 0; padding-left: 18px; font-size: 14.5px; }
+    .highlights li { margin: 5px 0; }
+    .highlights li::marker { color: var(--accent); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+    .tag { font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+    .card footer {
+      margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+      font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); margin-top: 18px;
+    }
+    .card footer a { font-weight: 600; }
+    .empty { color: var(--muted); }
+
+    .page-footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
+    @media (max-width: 520px) {
+      .page { padding-top: 36px; }
+      .avatar { width: 68px; height: 68px; }
+      .projects { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <img class="avatar" src="https://github.com/satyaprakashdwivedi.png?size=176" alt="" width="88" height="88">
+      <div>
+        <h1>Satyaprakash Dwivedi</h1>
+        <p class="headline">Engineering leader · Data platforms · AI engineering</p>
+      </div>
+    </section>
+    <p class="summary-text">Engineering leader with 14+ years building data platforms, now rebuilding hands-on as an AI/ML architect. These are the open-source projects I&#x27;m actively working on: streaming data pipelines, Spark performance tooling, and agentic AI built with a team of AI coding agents.</p>
+    <nav class="links">
+      <a class="button primary" href="https://github.com/satyaprakashdwivedi">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        GitHub
+      </a>
+      <a class="button" href="https://www.linkedin.com/in/satyaprakashdwivedi/">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.6 0H2.4A2.4 2.4 0 000 2.4v11.2A2.4 2.4 0 002.4 16h11.2a2.4 2.4 0 002.4-2.4V2.4A2.4 2.4 0 0013.6 0zM4.9 13.4H2.6V6h2.3v7.4zM3.7 5a1.3 1.3 0 110-2.7 1.3 1.3 0 010 2.7zm9.7 8.4h-2.3V9.8c0-.9 0-2-1.2-2s-1.4.9-1.4 1.9v3.7H6.2V6h2.2v1h.1c.3-.6 1.1-1.2 2.2-1.2 2.4 0 2.8 1.6 2.8 3.6v4z"/></svg>
+        LinkedIn
+      </a>
+    </nav>
+
+    <h2>What I work on</h2>
+    <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, checkpoints, and performance tuning from real Spark logs.</p></div><div class="focus"><h3>AI-assisted engineering</h3><p>Claude skills and multi-agent workflows that turn expertise into tools anyone on a team can use.</p></div></div>
+
+    <h2>Active projects</h2>
+    <p class="section-note">5 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
+    <section class="projects">
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline-py">Spark Streaming Pipelines: PySpark</a></h3>
+        </header>
+        <p class="summary">Config-driven Spark Structured Streaming for Python teams. Describe source, transforms and sinks in YAML; it wires and runs the streaming queries.</p>
+        <ul class="highlights"><li>Real Great Expectations validation on every micro-batch, including table-level checks</li><li>Row-level quality rules with a quarantine stream that records why each row failed</li><li>dbt models as streaming business rules; pandas UDFs and plain Python functions as steps</li><li>Runs via spark-submit, Databricks or Kubernetes · 45 tests in CI</li></ul>
+        <div class="tags"><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Great Expectations</span><span class="tag">dbt</span><span class="tag">pandas UDF</span></div>
+        <footer>
+          <span>2 commits in the last 30 days · last 17 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline-py">View on GitHub →</a>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline">Spark Streaming Pipelines: Java</a></h3>
+        </header>
+        <p class="summary">The JVM version of the same idea: one small jar for spark-submit, pipelines defined in HOCON, same step types and options as the PySpark twin.</p>
+        <ul class="highlights"><li>Kafka, file and JDBC sources and sinks; JSON, SQL, lookup-join, watermark and dedup transforms</li><li>Data quality with Great Expectations suite import; dbt models compiled and run in the stream</li><li>A Claude skill that builds a pipeline from just source, rules and sink</li><li>Spark 3.5 · Java 11/17 · 31 tests + CI</li></ul>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spark 3.5</span><span class="tag">Kafka</span><span class="tag">dbt</span><span class="tag">Claude skill</span></div>
+        <footer>
+          <span>3 commits in the last 30 days · last 17 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline">View on GitHub →</a>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/spark-optimizer-skill">Spark Optimizer: Claude Skill</a></h3>
+        </header>
+        <p class="summary">Point it at Spark event logs and executor logs; it measures what went wrong and recommends a conflict-free Spark config.</p>
+        <ul class="highlights"><li>Detects skew, spill, GC pressure, wrongly sized shuffle partitions, idle executors</li><li>Tells heap OOM apart from container kills (exit 137) and shifts memory from heap to overhead</li><li>Sizes executors to your nodes so heap + overhead + Python memory always fit</li><li>Standard-library only · 17 tests in CI</li></ul>
+        <div class="tags"><span class="tag">Apache Spark</span><span class="tag">Performance tuning</span><span class="tag">Claude skill</span><span class="tag">Python</span></div>
+        <footer>
+          <span>4 commits in the last 30 days · last 15 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/spark-optimizer-skill">View on GitHub →</a>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/ai-engineering-portfolio">AI Engineering Portfolio</a></h3><span class="status">In progress</span>
+        </header>
+        <p class="summary">A 16-week hands-on program: classical ML, deep learning, RAG, tool calling and MCP, LangGraph agents, multi-agent systems, fine-tuning and LLMOps, each as a measured module.</p>
+        <ul class="highlights"><li>Built as tech lead directing a team of AI coding agents (Claude Code subagents + AI PR review)</li><li>Hybrid model routing: Claude API plus local models via Ollama</li></ul>
+        <div class="tags"><span class="tag">ML</span><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">MCP</span><span class="tag">LLMOps</span></div>
+        <footer>
+          <span>1 commit in the last 30 days · last 9 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/ai-engineering-portfolio">View on GitHub →</a>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/capstone-data-platform-copilot">Data Platform Copilot</a></h3><span class="status">In progress</span>
+        </header>
+        <p class="summary">Capstone: a multi-agent LangGraph system for data platform teams that answers data questions, checks data quality, triages pipeline incidents and finds runbook answers, with human approval before actions.</p>
+        <ul class="highlights"><li>Supervisor, NL→SQL, data-quality, runbook-RAG and incident-triage agents</li><li>Designed to be cost-aware, evaluated and observable</li></ul>
+        <div class="tags"><span class="tag">LangGraph</span><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Data quality</span></div>
+        <footer>
+          <span>1 commit in the last 30 days · last 9 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/capstone-data-platform-copilot">View on GitHub →</a>
+        </footer>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      Built from the GitHub API · updated 17 Nov 2026 · <a href="https://github.com/satyaprakashdwivedi">github.com/satyaprakashdwivedi</a>
+    </footer>
+  </main>
+</body>
+</html>

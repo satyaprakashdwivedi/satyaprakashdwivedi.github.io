@@ -1,0 +1,75 @@
+{
+  "profile": {
+    "name": "Satyaprakash Dwivedi",
+    "headline": "Engineering leader · Data platforms · AI engineering",
+    "summary": "Engineering leader with 14+ years building data platforms, now rebuilding hands-on as an AI/ML architect. These are the open-source projects I'm actively working on: streaming data pipelines, Spark performance tooling, and agentic AI built with a team of AI coding agents.",
+    "github": "https://github.com/satyaprakashdwivedi",
+    "linkedin": "https://www.linkedin.com/in/satyaprakashdwivedi/",
+    "focus": [
+      { "title": "Streaming data platforms", "text": "Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped." },
+      { "title": "Data quality & reliability", "text": "Great Expectations, quarantine streams, checkpoints, and performance tuning from real Spark logs." },
+      { "title": "AI-assisted engineering", "text": "Claude skills and multi-agent workflows that turn expertise into tools anyone on a team can use." }
+    ]
+  },
+  "author_names": ["Satyaprakash Dwivedi", "Satya Prakash Dwivedi"],
+  "projects": {
+    "spark-streaming-pipeline-py": {
+      "title": "Spark Streaming Pipelines: PySpark",
+      "order": 1,
+      "summary": "Config-driven Spark Structured Streaming for Python teams. Describe source, transforms and sinks in YAML; it wires and runs the streaming queries.",
+      "highlights": [
+        "Real Great Expectations validation on every micro-batch, including table-level checks",
+        "Row-level quality rules with a quarantine stream that records why each row failed",
+        "dbt models as streaming business rules; pandas UDFs and plain Python functions as steps",
+        "Runs via spark-submit, Databricks or Kubernetes · 45 tests in CI"
+      ],
+      "tags": ["PySpark", "Kafka", "Great Expectations", "dbt", "pandas UDF"]
+    },
+    "spark-streaming-pipeline": {
+      "title": "Spark Streaming Pipelines: Java",
+      "order": 2,
+      "summary": "The JVM version of the same idea: one small jar for spark-submit, pipelines defined in HOCON, same step types and options as the PySpark twin.",
+      "highlights": [
+        "Kafka, file and JDBC sources and sinks; JSON, SQL, lookup-join, watermark and dedup transforms",
+        "Data quality with Great Expectations suite import; dbt models compiled and run in the stream",
+        "A Claude skill that builds a pipeline from just source, rules and sink",
+        "Spark 3.5 · Java 11/17 · 31 tests + CI"
+      ],
+      "tags": ["Java", "Spark 3.5", "Kafka", "dbt", "Claude skill"]
+    },
+    "spark-optimizer-skill": {
+      "title": "Spark Optimizer: Claude Skill",
+      "order": 3,
+      "summary": "Point it at Spark event logs and executor logs; it measures what went wrong and recommends a conflict-free Spark config.",
+      "highlights": [
+        "Detects skew, spill, GC pressure, wrongly sized shuffle partitions, idle executors",
+        "Tells heap OOM apart from container kills (exit 137) and shifts memory from heap to overhead",
+        "Sizes executors to your nodes so heap + overhead + Python memory always fit",
+        "Standard-library only · 17 tests in CI"
+      ],
+      "tags": ["Apache Spark", "Performance tuning", "Claude skill", "Python"]
+    },
+    "ai-engineering-portfolio": {
+      "title": "AI Engineering Portfolio",
+      "order": 4,
+      "status": "In progress",
+      "summary": "A 16-week hands-on program: classical ML, deep learning, RAG, tool calling and MCP, LangGraph agents, multi-agent systems, fine-tuning and LLMOps, each as a measured module.",
+      "highlights": [
+        "Built as tech lead directing a team of AI coding agents (Claude Code subagents + AI PR review)",
+        "Hybrid model routing: Claude API plus local models via Ollama"
+      ],
+      "tags": ["ML", "RAG", "LangGraph", "MCP", "LLMOps"]
+    },
+    "capstone-data-platform-copilot": {
+      "title": "Data Platform Copilot",
+      "order": 5,
+      "status": "In progress",
+      "summary": "Capstone: a multi-agent LangGraph system for data platform teams that answers data questions, checks data quality, triages pipeline incidents and finds runbook answers, with human approval before actions.",
+      "highlights": [
+        "Supervisor, NL→SQL, data-quality, runbook-RAG and incident-triage agents",
+        "Designed to be cost-aware, evaluated and observable"
+      ],
+      "tags": ["LangGraph", "Multi-agent", "RAG", "Data quality"]
+    }
+  }
+}
