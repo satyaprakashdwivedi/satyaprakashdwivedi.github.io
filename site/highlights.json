@@ -20,28 +20,6 @@
       }
     ],
     "location": "Gurugram, India · open to remote",
-    "stats": [
-      {
-        "value": "15+",
-        "label": "years building data platforms"
-      },
-      {
-        "value": "4 → 35",
-        "label": "engineers: team grown across 3 countries"
-      },
-      {
-        "value": "15M/day",
-        "label": "events under a 1-hour SLA"
-      },
-      {
-        "value": "4h → 30m",
-        "label": "incident MTTR with AI-assisted triage"
-      },
-      {
-        "value": "−30%",
-        "label": "Spark compute cost via a log-reading optimiser"
-      }
-    ],
     "experience": [
       {
         "company": "Expedia Group",
