@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Satyaprakash Dwivedi · Projects</title>
-  <meta name="description" content="Senior Engineering Manager – Data Platform · AI Engineering · 15+ years. Open-source projects I'm actively building: streaming data pipelines, Spark performance tooling and agentic AI.">
+  <meta name="description" content="Senior Engineering Manager – Data Platform · AI Engineering · 15+ years. Open-source projects I'm actively building: an agentic ops assistant (n8n, Claude, MCP), streaming data pipelines and Spark performance tooling.">
   <link rel="canonical" href="https://satyaprakashdwivedi.github.io/">
   <!-- LinkedIn / social preview -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://satyaprakashdwivedi.github.io/">
   <meta property="og:title" content="Satyaprakash Dwivedi: Open-source projects">
-  <meta property="og:description" content="Senior Engineering Manager, Data Platform & AI Engineering (15+ years). Reusable open-source work: streaming pipelines (Java & PySpark), a Spark optimizer Claude skill, and agentic AI.">
+  <meta property="og:description" content="Senior Engineering Manager, Data Platform & AI Engineering (15+ years). Reusable open-source work: an agentic data platform ops assistant (n8n, Claude, MCP), streaming pipelines (Java & PySpark) and a Spark optimizer Claude skill.">
   <meta property="og:image" content="https://satyaprakashdwivedi.github.io/assets/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="627">
@@ -125,11 +125,23 @@
     </nav>
 
     <h2>What I work on</h2>
-    <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, as I&#x27;ve run at Expedia and for a Fortune 100 card issuer.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero.</p></div><div class="focus"><h3>AI-assisted engineering</h3><p>Claude skills and multi-agent workflows that turn expertise into tools a whole team can use, always with human review.</p></div></div>
+    <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, as I&#x27;ve run at Expedia and for a Fortune 100 card issuer.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero.</p></div><div class="focus"><h3>Agentic AI in production</h3><p>Agents that act on real platforms safely: n8n and Claude over MCP tools, grounded in deterministic analysis, bounded by guardrails in code and approved by a person before anything changes.</p></div></div>
 
     <h2>Active projects</h2>
-    <p class="section-note">5 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
+    <p class="section-note">6 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
     <section class="projects">
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/data-platform-ops-agent">Data Platform Ops Agent: n8n + Claude + MCP</a></h3>
+        </header>
+        <p class="summary">Agentic on-call for a data platform: n8n orchestrates a Claude agent whose MCP tools wrap the Spark optimizer and data quality checks. It diagnoses failures, proposes a fix and opens the PR once a person approves.</p>
+        <ul class="highlights"><li>The LLM never does the maths: deterministic analyzers give the numbers, the agent reasons over them</li><li>Guardrails in code and expiring human approvals before anything changes</li><li>n8n queue mode (workers, Redis, Postgres) with every tool call and decision audited</li><li>CI boots the full stack and runs every workflow end to end</li></ul>
+        <div class="tags"><span class="tag">Agentic AI</span><span class="tag">n8n</span><span class="tag">Claude</span><span class="tag">MCP</span><span class="tag">Spark</span><span class="tag">Data quality</span></div>
+        <footer>
+          <span>1 commit in the last 30 days · last 18 Nov 2026</span>
+          <a href="https://github.com/satyaprakashdwivedi/data-platform-ops-agent">View on GitHub →</a>
+        </footer>
+      </article>
       <article class="card">
         <header>
           <h3><a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline-py">Spark Streaming Pipelines: PySpark</a></h3>

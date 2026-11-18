@@ -15,8 +15,8 @@
         "text": "Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero."
       },
       {
-        "title": "AI-assisted engineering",
-        "text": "Claude skills and multi-agent workflows that turn expertise into tools a whole team can use, always with human review."
+        "title": "Agentic AI in production",
+        "text": "Agents that act on real platforms safely: n8n and Claude over MCP tools, grounded in deterministic analysis, bounded by guardrails in code and approved by a person before anything changes."
       }
     ],
     "location": "Gurugram, India · open to remote",
@@ -59,9 +59,28 @@
     "Satya Prakash Dwivedi"
   ],
   "projects": {
+    "data-platform-ops-agent": {
+      "title": "Data Platform Ops Agent: n8n + Claude + MCP",
+      "order": 1,
+      "summary": "Agentic on-call for a data platform: n8n orchestrates a Claude agent whose MCP tools wrap the Spark optimizer and data quality checks. It diagnoses failures, proposes a fix and opens the PR once a person approves.",
+      "highlights": [
+        "The LLM never does the maths: deterministic analyzers give the numbers, the agent reasons over them",
+        "Guardrails in code and expiring human approvals before anything changes",
+        "n8n queue mode (workers, Redis, Postgres) with every tool call and decision audited",
+        "CI boots the full stack and runs every workflow end to end"
+      ],
+      "tags": [
+        "Agentic AI",
+        "n8n",
+        "Claude",
+        "MCP",
+        "Spark",
+        "Data quality"
+      ]
+    },
     "spark-streaming-pipeline-py": {
       "title": "Spark Streaming Pipelines: PySpark",
-      "order": 1,
+      "order": 2,
       "summary": "Config-driven Spark Structured Streaming for Python teams. Describe source, transforms and sinks in YAML; it wires and runs the streaming queries.",
       "highlights": [
         "Real Great Expectations validation on every micro-batch, including table-level checks",
@@ -79,7 +98,7 @@
     },
     "spark-streaming-pipeline": {
       "title": "Spark Streaming Pipelines: Java",
-      "order": 2,
+      "order": 3,
       "summary": "The JVM version of the same idea: one small jar for spark-submit, pipelines defined in HOCON, same step types and options as the PySpark twin.",
       "highlights": [
         "Kafka, file and JDBC sources and sinks; JSON, SQL, lookup-join, watermark and dedup transforms",
@@ -97,7 +116,7 @@
     },
     "spark-optimizer-skill": {
       "title": "Spark Optimizer: Claude Skill",
-      "order": 3,
+      "order": 4,
       "summary": "Open-source version of the Spark optimiser I built at work, where it cut Spark compute cost 30%. Point it at Spark event and executor logs; it measures what went wrong and recommends a conflict-free config.",
       "highlights": [
         "Detects skew, spill, GC pressure, wrongly sized shuffle partitions, idle executors",
@@ -114,7 +133,7 @@
     },
     "ai-engineering-portfolio": {
       "title": "AI Engineering Portfolio",
-      "order": 4,
+      "order": 5,
       "status": "In progress",
       "summary": "A 16-week hands-on program: classical ML, deep learning, RAG, tool calling and MCP, LangGraph agents, multi-agent systems, fine-tuning and LLMOps, each as a measured module.",
       "highlights": [
@@ -131,7 +150,7 @@
     },
     "capstone-data-platform-copilot": {
       "title": "Data Platform Copilot",
-      "order": 5,
+      "order": 6,
       "status": "In progress",
       "summary": "Capstone: a multi-agent LangGraph system for data platform teams that answers data questions, checks data quality, triages pipeline incidents and finds runbook answers, with human approval before actions.",
       "highlights": [
