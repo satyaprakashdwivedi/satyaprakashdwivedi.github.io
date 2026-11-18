@@ -85,15 +85,11 @@
     .empty { color: var(--muted); }
 
     .location { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
-    .experience { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line);
-                  border-radius: 14px; box-shadow: var(--shadow); }
-    .experience li { padding: 16px 20px; border-top: 1px solid var(--line); }
-    .experience li:first-child { border-top: 0; }
-    .company { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; flex-wrap: wrap; }
-    .company span { font-weight: 500; font-size: 14px; color: var(--muted); }
-    .role { font-size: 14px; color: var(--accent); font-weight: 600; margin-top: 1px; }
-    .experience p { margin: 6px 0 0; font-size: 14.5px; color: var(--muted); }
-    .earlier { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+    .built { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line);
+             border-radius: 14px; box-shadow: var(--shadow); }
+    .built li { padding: 14px 20px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+    .built li:first-child { border-top: 0; }
+    .built strong { color: var(--text); margin-right: 6px; }
     .page-footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
     @media (max-width: 520px) {
       .page { padding-top: 36px; }
@@ -125,7 +121,7 @@
     </nav>
 
     <h2>What I work on</h2>
-    <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, as I&#x27;ve run at Expedia and for a Fortune 100 card issuer.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero.</p></div><div class="focus"><h3>Agentic AI in production</h3><p>Agents that act on real platforms safely: n8n and Claude over MCP tools, grounded in deterministic analysis, bounded by guardrails in code and approved by a person before anything changes.</p></div></div>
+    <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, the way I&#x27;ve run them for travel and card payments at scale.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero.</p></div><div class="focus"><h3>Agentic AI in production</h3><p>Agents that act on real platforms safely: n8n and Claude over MCP tools, grounded in deterministic analysis, bounded by guardrails in code and approved by a person before anything changes.</p></div></div>
 
     <h2>Active projects</h2>
     <p class="section-note">6 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
@@ -138,7 +134,7 @@
         <ul class="highlights"><li>The LLM never does the maths: deterministic analyzers give the numbers, the agent reasons over them</li><li>Guardrails in code and expiring human approvals before anything changes</li><li>n8n queue mode (workers, Redis, Postgres) with every tool call and decision audited</li><li>CI boots the full stack and runs every workflow end to end</li></ul>
         <div class="tags"><span class="tag">Agentic AI</span><span class="tag">n8n</span><span class="tag">Claude</span><span class="tag">MCP</span><span class="tag">Spark</span><span class="tag">Data quality</span></div>
         <footer>
-          <span>1 commit in the last 30 days · last 18 Nov 2026</span>
+          <span>2 commits in the last 30 days · last 18 Nov 2026</span>
           <a href="https://github.com/satyaprakashdwivedi/data-platform-ops-agent">View on GitHub →</a>
         </footer>
       </article>
@@ -204,10 +200,9 @@
       </article>
     </section>
 
-    <h2>Where I've built data platforms</h2>
-    <p class="section-note">Travel and regulated financial services.</p>
-    <ul class="experience"><li><div class="company">Expedia Group<span>2023 – now</span></div><div class="role">Senior Manager, Data Engineering</div><p>Data platform behind OneKey, Expedia&#x27;s loyalty programme: 250+ Airflow pipelines, batch and streaming; AI agents for vulnerability fixes and Spark tuning.</p></li><li><div class="company">CRISIL<span>2021 – 2023</span></div><div class="role">Associate Director, Platform Architecture</div><p>Company-wide data platform from the ground up, with cataloguing and lineage across every business domain.</p></li><li><div class="company">S&amp;P Global<span>2019 – 2021</span></div><div class="role">Senior Manager, Ingestion Platform</div><p>Cloud-native DataOps ingestion on NiFi and Databricks: data onboarding cut from 7 days to 4 hours.</p></li><li><div class="company">Fortune 100 card issuer (via Impetus)<span>2018 – 2019</span></div><div class="role">Lead Big Data Engineer</div><p>Real-time data platform feeding ML models at 50–500 ms SLAs on Spark Structured Streaming.</p></li><li><div class="company">Citi<span>2014 – 2018</span></div><div class="role">Manager, Big Data</div><p>Pipelines behind daily regulatory reports for global regulators, under a zero-miss mandate.</p></li></ul>
-    <p class="earlier">Earlier: software engineering at HSBC (payments) and Cognizant (Java, application security).</p>
+    <h2>What I've built</h2>
+    <p class="section-note">Data platforms I've designed and run over 15+ years, across travel and regulated financial services.</p>
+    <ul class="built"><li><strong>Loyalty data platform</strong> 250+ Airflow pipelines, batch and streaming, with AI agents that fix vulnerabilities and tune Spark.</li><li><strong>Enterprise data platform from zero</strong> Built ground-up for a whole company, with cataloguing and lineage across every business domain.</li><li><strong>DataOps ingestion platform</strong> Cloud-native on NiFi and Databricks; data onboarding cut from 7 days to 4 hours.</li><li><strong>Real-time ML feature pipelines</strong> Spark Structured Streaming feeding ML models at 50–500 ms SLAs.</li><li><strong>Regulatory reporting pipelines</strong> Daily reports to global regulators, run under a zero-miss mandate.</li></ul>
 
     <footer class="page-footer">
       Built from the GitHub API · updated 18 Nov 2026 · <a href="https://github.com/satyaprakashdwivedi">github.com/satyaprakashdwivedi</a>

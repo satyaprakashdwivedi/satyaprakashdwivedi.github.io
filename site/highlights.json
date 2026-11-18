@@ -8,7 +8,7 @@
     "focus": [
       {
         "title": "Streaming data platforms",
-        "text": "Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, as I've run at Expedia and for a Fortune 100 card issuer."
+        "text": "Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, the way I've run them for travel and card payments at scale."
       },
       {
         "title": "Data quality & reliability",
@@ -20,39 +20,28 @@
       }
     ],
     "location": "Gurugram, India · open to remote",
-    "experience": [
+    "built": [
       {
-        "company": "Expedia Group",
-        "role": "Senior Manager, Data Engineering",
-        "years": "2023 – now",
-        "text": "Data platform behind OneKey, Expedia's loyalty programme: 250+ Airflow pipelines, batch and streaming; AI agents for vulnerability fixes and Spark tuning."
+        "title": "Loyalty data platform",
+        "text": "250+ Airflow pipelines, batch and streaming, with AI agents that fix vulnerabilities and tune Spark."
       },
       {
-        "company": "CRISIL",
-        "role": "Associate Director, Platform Architecture",
-        "years": "2021 – 2023",
-        "text": "Company-wide data platform from the ground up, with cataloguing and lineage across every business domain."
+        "title": "Enterprise data platform from zero",
+        "text": "Built ground-up for a whole company, with cataloguing and lineage across every business domain."
       },
       {
-        "company": "S&P Global",
-        "role": "Senior Manager, Ingestion Platform",
-        "years": "2019 – 2021",
-        "text": "Cloud-native DataOps ingestion on NiFi and Databricks: data onboarding cut from 7 days to 4 hours."
+        "title": "DataOps ingestion platform",
+        "text": "Cloud-native on NiFi and Databricks; data onboarding cut from 7 days to 4 hours."
       },
       {
-        "company": "Fortune 100 card issuer (via Impetus)",
-        "role": "Lead Big Data Engineer",
-        "years": "2018 – 2019",
-        "text": "Real-time data platform feeding ML models at 50–500 ms SLAs on Spark Structured Streaming."
+        "title": "Real-time ML feature pipelines",
+        "text": "Spark Structured Streaming feeding ML models at 50–500 ms SLAs."
       },
       {
-        "company": "Citi",
-        "role": "Manager, Big Data",
-        "years": "2014 – 2018",
-        "text": "Pipelines behind daily regulatory reports for global regulators, under a zero-miss mandate."
+        "title": "Regulatory reporting pipelines",
+        "text": "Daily reports to global regulators, run under a zero-miss mandate."
       }
-    ],
-    "experience_earlier": "Earlier: software engineering at HSBC (payments) and Cognizant (Java, application security)."
+    ]
   },
   "author_names": [
     "Satyaprakash Dwivedi",

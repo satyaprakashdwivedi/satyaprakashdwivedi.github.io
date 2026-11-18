@@ -85,15 +85,11 @@
     .empty { color: var(--muted); }
 
     .location { margin: 2px 0 0; color: var(--muted); font-size: 14px; }
-    .experience { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line);
-                  border-radius: 14px; box-shadow: var(--shadow); }
-    .experience li { padding: 16px 20px; border-top: 1px solid var(--line); }
-    .experience li:first-child { border-top: 0; }
-    .company { display: flex; justify-content: space-between; gap: 12px; font-weight: 700; flex-wrap: wrap; }
-    .company span { font-weight: 500; font-size: 14px; color: var(--muted); }
-    .role { font-size: 14px; color: var(--accent); font-weight: 600; margin-top: 1px; }
-    .experience p { margin: 6px 0 0; font-size: 14.5px; color: var(--muted); }
-    .earlier { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+    .built { list-style: none; margin: 0; padding: 0; background: var(--surface); border: 1px solid var(--line);
+             border-radius: 14px; box-shadow: var(--shadow); }
+    .built li { padding: 14px 20px; border-top: 1px solid var(--line); font-size: 15px; color: var(--muted); }
+    .built li:first-child { border-top: 0; }
+    .built strong { color: var(--text); margin-right: 6px; }
     .page-footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
     @media (max-width: 520px) {
       .page { padding-top: 36px; }
@@ -132,10 +128,9 @@
     <section class="projects">{{PROJECT_CARDS}}
     </section>
 
-    <h2>Where I've built data platforms</h2>
-    <p class="section-note">Travel and regulated financial services.</p>
-    <ul class="experience">{{EXPERIENCE}}</ul>
-    <p class="earlier">{{EXPERIENCE_EARLIER}}</p>
+    <h2>What I've built</h2>
+    <p class="section-note">Data platforms I've designed and run over 15+ years, across travel and regulated financial services.</p>
+    <ul class="built">{{BUILT}}</ul>
 
     <footer class="page-footer">
       Built from the GitHub API · updated {{BUILT_ON}} · <a href="{{GITHUB}}">github.com/satyaprakashdwivedi</a>
