@@ -124,7 +124,7 @@
     <div class="focus-grid"><div class="focus"><h3>Streaming data platforms</h3><p>Spark Structured Streaming and Kafka pipelines that are config-driven, tested and production-shaped, the way I&#x27;ve run them for travel and card payments at scale.</p></div><div class="focus"><h3>Data quality &amp; reliability</h3><p>Great Expectations, quarantine streams, SLA-bound pipelines and on-call that starts with context, not from zero.</p></div><div class="focus"><h3>Agentic AI in production</h3><p>Agents that act on real platforms safely: n8n and Claude over MCP tools, grounded in deterministic analysis, bounded by guardrails in code and approved by a person before anything changes.</p></div></div>
 
     <h2>Active projects</h2>
-    <p class="section-note">6 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
+    <p class="section-note">8 public repositories I've committed to in the last 30 days. This list updates itself daily.</p>
     <section class="projects">
       <article class="card">
         <header>
@@ -135,7 +135,31 @@
         <div class="tags"><span class="tag">Agentic AI</span><span class="tag">n8n</span><span class="tag">Claude</span><span class="tag">MCP</span><span class="tag">Spark</span><span class="tag">Data quality</span></div>
         <footer>
           <span>2 commits in the last 30 days · last 18 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/data-platform-ops-agent">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/data-platform-ops-agent">View on GitHub →</a></span>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/mongodb-query-advisor">MongoDB Query Advisor: Claude Skill</a></h3>
+        </header>
+        <p class="summary">Reads MongoDB explain plans, slow query logs, index stats and Atlas Vector Search pipelines, then says what is slow, why, and which indexes to create, hide or drop.</p>
+        <ul class="highlights"><li>Catches collection scans, ESR-order mistakes, unindexed $lookup, deep skips and vector-search post-filters</li><li>Proven on a real MongoDB 8.0: one $lookup went from 2.48M documents examined to 644, and 262 ms to 2 ms</li><li>Never recommends an index that already exists; always hides before dropping</li><li>CI re-captures every example from a live MongoDB on each push</li></ul>
+        <div class="tags"><span class="tag">MongoDB</span><span class="tag">Query optimisation</span><span class="tag">Vector Search</span><span class="tag">Claude skill</span></div>
+        <footer>
+          <span>2 commits in the last 30 days · last 24 Nov 2026</span>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/mongodb-query-advisor">View on GitHub →</a></span>
+        </footer>
+      </article>
+      <article class="card">
+        <header>
+          <h3><a href="https://github.com/satyaprakashdwivedi/ai-integrations-health">AI Integrations Health: MongoDB × AI frameworks</a></h3>
+        </header>
+        <p class="summary">A nightly safety net for MongoDB&#x27;s AI framework integrations (LangChain, LangGraph, LlamaIndex, LangChain.js, Mastra), published as a live dashboard.</p>
+        <ul class="highlights"><li>Contract tests at the latest and previous release lines × driver versions, against MongoDB Atlas Local with Vector Search</li><li>Downloads, release freshness and issue response time alongside test results</li><li>Opens an issue automatically when an installable combination breaks</li><li>Python and TypeScript, run in parallel on GitHub Actions</li></ul>
+        <div class="tags"><span class="tag">MongoDB</span><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Mastra</span><span class="tag">CI</span><span class="tag">Python</span><span class="tag">TypeScript</span></div>
+        <footer>
+          <span>1 commit in the last 30 days · last 24 Nov 2026</span>
+          <span class="card-links"><a href="https://satyaprakashdwivedi.github.io/ai-integrations-health/">Live dashboard →</a> · <a href="https://github.com/satyaprakashdwivedi/ai-integrations-health">View on GitHub →</a></span>
         </footer>
       </article>
       <article class="card">
@@ -147,7 +171,7 @@
         <div class="tags"><span class="tag">PySpark</span><span class="tag">Kafka</span><span class="tag">Great Expectations</span><span class="tag">dbt</span><span class="tag">pandas UDF</span></div>
         <footer>
           <span>2 commits in the last 30 days · last 17 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline-py">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline-py">View on GitHub →</a></span>
         </footer>
       </article>
       <article class="card">
@@ -159,7 +183,7 @@
         <div class="tags"><span class="tag">Java</span><span class="tag">Spark 3.5</span><span class="tag">Kafka</span><span class="tag">dbt</span><span class="tag">Claude skill</span></div>
         <footer>
           <span>3 commits in the last 30 days · last 17 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/spark-streaming-pipeline">View on GitHub →</a></span>
         </footer>
       </article>
       <article class="card">
@@ -171,7 +195,7 @@
         <div class="tags"><span class="tag">Apache Spark</span><span class="tag">Performance tuning</span><span class="tag">Claude skill</span><span class="tag">Python</span></div>
         <footer>
           <span>4 commits in the last 30 days · last 15 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/spark-optimizer-skill">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/spark-optimizer-skill">View on GitHub →</a></span>
         </footer>
       </article>
       <article class="card">
@@ -183,7 +207,7 @@
         <div class="tags"><span class="tag">ML</span><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">MCP</span><span class="tag">LLMOps</span></div>
         <footer>
           <span>1 commit in the last 30 days · last 17 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/ai-engineering-portfolio">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/ai-engineering-portfolio">View on GitHub →</a></span>
         </footer>
       </article>
       <article class="card">
@@ -195,7 +219,7 @@
         <div class="tags"><span class="tag">LangGraph</span><span class="tag">Multi-agent</span><span class="tag">RAG</span><span class="tag">Data quality</span></div>
         <footer>
           <span>1 commit in the last 30 days · last 17 Nov 2026</span>
-          <a href="https://github.com/satyaprakashdwivedi/capstone-data-platform-copilot">View on GitHub →</a>
+          <span class="card-links"><a href="https://github.com/satyaprakashdwivedi/capstone-data-platform-copilot">View on GitHub →</a></span>
         </footer>
       </article>
     </section>

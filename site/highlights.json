@@ -67,9 +67,47 @@
         "Data quality"
       ]
     },
+    "mongodb-query-advisor": {
+      "title": "MongoDB Query Advisor: Claude Skill",
+      "order": 2,
+      "summary": "Reads MongoDB explain plans, slow query logs, index stats and Atlas Vector Search pipelines, then says what is slow, why, and which indexes to create, hide or drop.",
+      "highlights": [
+        "Catches collection scans, ESR-order mistakes, unindexed $lookup, deep skips and vector-search post-filters",
+        "Proven on a real MongoDB 8.0: one $lookup went from 2.48M documents examined to 644, and 262 ms to 2 ms",
+        "Never recommends an index that already exists; always hides before dropping",
+        "CI re-captures every example from a live MongoDB on each push"
+      ],
+      "tags": [
+        "MongoDB",
+        "Query optimisation",
+        "Vector Search",
+        "Claude skill"
+      ]
+    },
+    "ai-integrations-health": {
+      "title": "AI Integrations Health: MongoDB × AI frameworks",
+      "order": 3,
+      "summary": "A nightly safety net for MongoDB's AI framework integrations (LangChain, LangGraph, LlamaIndex, LangChain.js, Mastra), published as a live dashboard.",
+      "highlights": [
+        "Contract tests at the latest and previous release lines × driver versions, against MongoDB Atlas Local with Vector Search",
+        "Downloads, release freshness and issue response time alongside test results",
+        "Opens an issue automatically when an installable combination breaks",
+        "Python and TypeScript, run in parallel on GitHub Actions"
+      ],
+      "tags": [
+        "MongoDB",
+        "LangChain",
+        "LangGraph",
+        "Mastra",
+        "CI",
+        "Python",
+        "TypeScript"
+      ],
+      "link": "https://satyaprakashdwivedi.github.io/ai-integrations-health/"
+    },
     "spark-streaming-pipeline-py": {
       "title": "Spark Streaming Pipelines: PySpark",
-      "order": 2,
+      "order": 4,
       "summary": "Config-driven Spark Structured Streaming for Python teams. Describe source, transforms and sinks in YAML; it wires and runs the streaming queries.",
       "highlights": [
         "Real Great Expectations validation on every micro-batch, including table-level checks",
@@ -87,7 +125,7 @@
     },
     "spark-streaming-pipeline": {
       "title": "Spark Streaming Pipelines: Java",
-      "order": 3,
+      "order": 5,
       "summary": "The JVM version of the same idea: one small jar for spark-submit, pipelines defined in HOCON, same step types and options as the PySpark twin.",
       "highlights": [
         "Kafka, file and JDBC sources and sinks; JSON, SQL, lookup-join, watermark and dedup transforms",
@@ -105,7 +143,7 @@
     },
     "spark-optimizer-skill": {
       "title": "Spark Optimizer: Claude Skill",
-      "order": 4,
+      "order": 6,
       "summary": "Open-source version of the Spark optimiser I built at work, where it cut Spark compute cost 30%. Point it at Spark event and executor logs; it measures what went wrong and recommends a conflict-free config.",
       "highlights": [
         "Detects skew, spill, GC pressure, wrongly sized shuffle partitions, idle executors",
@@ -122,7 +160,7 @@
     },
     "ai-engineering-portfolio": {
       "title": "AI Engineering Portfolio",
-      "order": 5,
+      "order": 7,
       "status": "In progress",
       "summary": "A 16-week hands-on program: classical ML, deep learning, RAG, tool calling and MCP, LangGraph agents, multi-agent systems, fine-tuning and LLMOps, each as a measured module.",
       "highlights": [
@@ -139,7 +177,7 @@
     },
     "capstone-data-platform-copilot": {
       "title": "Data Platform Copilot",
-      "order": 6,
+      "order": 8,
       "status": "In progress",
       "summary": "Capstone: a multi-agent LangGraph system for data platform teams that answers data questions, checks data quality, triages pipeline incidents and finds runbook answers, with human approval before actions.",
       "highlights": [

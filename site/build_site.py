@@ -60,6 +60,7 @@ def active_public_repositories(curated):
             "highlights": details.get("highlights", []),
             "tags": details.get("tags", [repository["language"]] if repository.get("language") else []),
             "status": details.get("status"),
+            "live_link": details.get("link"),
             "order": details.get("order", 100),
             "commit_count": len(commits),
             "last_commit": max(commit["commit"]["author"]["date"] for commit in commits),
@@ -89,7 +90,8 @@ def render_project_card(project):
         <div class="tags">{tags}</div>
         <footer>
           <span>{project['commit_count']} commit{plural} in the last {ACTIVITY_WINDOW_DAYS} days · last {format_date(project['last_commit'])}</span>
-          <a href="{escape(project['url'])}">View on GitHub →</a>
+          <span class="card-links">{f'<a href="{escape(project["live_link"])}">Live dashboard →</a> · '
+                                    if project.get("live_link") else ""}<a href="{escape(project['url'])}">View on GitHub →</a></span>
         </footer>
       </article>"""
 
